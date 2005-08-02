@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VISDA_CJavaInterface - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\JIAJIN~1\LOCALS~1\Temp\RSP78.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "VISDA_CJAVAINTERFACE_EXPORTS" /D "_WINDLL" /D "_AFXDLL" /Fp"VISDA_CJavaInterface___Win32_Debug/VISDA_CJavaInterface.pch" /YX /Fo"VISDA_CJavaInterface___Win32_Debug/" /Fd"VISDA_CJavaInterface___Win32_Debug/" /FD /GZ /c 
+"D:\temp\Jiajing\work\workspace\VISDA_C\src\CFMCore.cpp"
+"D:\temp\Jiajing\work\workspace\VISDA_C\src\DRMCore.cpp"
+"D:\temp\Jiajing\work\workspace\VISDA_C\src\FeaturePreSelector.cpp"
+"D:\temp\Jiajing\work\workspace\VISDA_C\src\VeVisT.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\JIAJIN~1\LOCALS~1\Temp\RSP78.tmp" 
+Creating temporary file "C:\DOCUME~1\JIAJIN~1\LOCALS~1\Temp\RSP79.tmp" with contents
+[
+VISDA_CLib.lib clapack.lib /nologo /dll /incremental:yes /pdb:"VISDA_CJavaInterface___Win32_Debug/VISDA_CJavaInterface.pdb" /debug /machine:I386 /out:"VISDA_CJavaInterface___Win32_Debug/VISDA_CJavaInterface.dll" /implib:"VISDA_CJavaInterface___Win32_Debug/VISDA_CJavaInterface.lib" /pdbtype:sept 
+.\VISDA_CJavaInterface___Win32_Debug\CFMCore.obj
+.\VISDA_CJavaInterface___Win32_Debug\DRMCore.obj
+.\VISDA_CJavaInterface___Win32_Debug\FeaturePreSelector.obj
+.\VISDA_CJavaInterface___Win32_Debug\VeVisT.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\JIAJIN~1\LOCALS~1\Temp\RSP79.tmp"
+<h3>Output Window</h3>
+Compiling...
+CFMCore.cpp
+DRMCore.cpp
+FeaturePreSelector.cpp
+VeVisT.cpp
+d:\temp\jiajing\work\workspace\visda_c\src\vevist.cpp(24) : warning C4244: 'argument' : conversion from 'unsigned short' to 'char', possible loss of data
+Linking...
+   Creating library VISDA_CJavaInterface___Win32_Debug/VISDA_CJavaInterface.lib and object VISDA_CJavaInterface___Win32_Debug/VISDA_CJavaInterface.exp
+LINK : warning LNK4098: defaultlib "LIBCD" conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib "MSVCRT" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+VISDA_CJavaInterface.dll - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>
