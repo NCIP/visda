@@ -1,0 +1,66 @@
+<project name="visda" default="build" basedir="../..">
+    <description>
+        handles build, jar, launch, and javadoc.  eventually will clean and dist
+    </description>
+
+    <!-- developers will want to change their 'homes' -->
+    <property name="output_home" location="."/>
+    <property name="src_home" location="."/>
+
+    <property name="visdaSrc" location="${src_home}\visdaDev\src"/>
+
+    <property name="lib" location="${src_home}\visdaDev\lib"/>
+    <property name="classes" location="${output_home}\visdaDev\classes"/>
+    <property name="doc" location="${output_home}\visdaDev\doc" />
+
+    <path id="project.class.path">
+        <pathelement location="${classes}"/>
+        <fileset dir="${lib}">
+            <include name="**/*.jar"/>
+            <include name="**/*.zip"/>
+        	<include name="**/*.dll"/>
+        </fileset>
+    </path>
+
+    <path id="project.source.path">
+        <pathelement path="${visdaSrc}"/>
+    </path>
+
+    <target name="prepare" description="setup output /lib and /classes">
+        <copy todir="${classes}\lib">
+               <fileset dir="${lib}"/>
+           </copy>
+     </target>
+
+    <target name="build" description="compile all code" depends="prepare">
+        <javac destdir="${classes}">
+            <src refid="project.source.path"/>
+            <classpath refid="project.class.path"/>
+        </javac>
+    </target>
+
+    <target name="jar" description="slap it all together" depends="build">
+        <jar destfile="${output_home}\visdaDev\visda.jar"
+            basedir="${classes}"
+        	manifest="${visdaSrc}\visda.manifest"
+            includes="edu/vt/cbil/visda/** org/math/plot/** org/math/array/** org/math/io/** com/braju/format/** Jamm/** org/jibble/epsgraphics/** VISDA_CJavaInterface.dll">
+        	</jar>
+    </target>
+
+    <target name="javadoc" description="Generating cbn_graph docs" depends="build">
+        <javadoc packagenames="edu.vt.cbil.visda.*, org.math.plot.*"
+                header="VISDA API"
+                package="true"
+                sourcepathref="project.source.path"
+                classpathref="project.class.path"
+                destdir="${doc}"
+                use="true"
+                windowTitle="VISDA API"
+                doctitle="&lt;h1&gt;VISDA API&lt;/h1&gt;"> 
+                <bottom><![CDATA[<i><center>Copyright &#169 2003 CBIL, VT.  All Rights Reserved</center></i>]]></bottom>
+        </javadoc>
+
+    </target>
+
+</project>
+

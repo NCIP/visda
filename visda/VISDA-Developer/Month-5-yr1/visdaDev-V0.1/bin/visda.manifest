@@ -1,0 +1,2 @@
+Main-class: edu.vt.cbil.visda.visda
+Class-Path: hb16.zip JAMA-1.0.1.jar jmatharray.jar jmathio.jar VISDA_CJavaInterface.dll
