@@ -1,7 +1,7 @@
 Welcome to the VISDA Project!
-===============================
+==============================
 
-VISDA (VIsual Statistical Data Analyzer) is an analytical tool for cluster modeling, visualization, and discovery. It is developed in Java.
+VISDA (VIsual Statistical Data Analyzer) is analytical tool for cluster modeling and visualization of microarray data. It is developed in Java.
 
 VISDA is distributed under the BSD 3-Clause License. Please see the NOTICE and LICENSE files for details.
 
